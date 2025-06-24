@@ -86,3 +86,120 @@ body {
   background: hsl(3, 86%, 64%);
   color: hsl(227, 75%, 14%);
 }
+
+.card {
+  background-color: hsl(225, 23%, 24%);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-text img {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px; /* Optional if you want slightly rounded icons */
+}
+
+.text h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.text p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #666;
+  max-width: 180px; /* To control paragraph width */
+}
+
+.btn-checkbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.remove {
+  padding: 6px 12px;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s;
+}
+
+.remove:hover {
+  background-color: #d32f2f;
+}
+
+.checkBtn {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+/* Hide default checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(226, 11%, 37%);
+  transition: 0.4s;
+  border-radius: 34px; /* Oval shape */
+}
+
+/* The small circle (the toggle knob) */
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* When checked, change background */
+input:checked + .slider {
+  background-color: hsl(3, 86%, 64%);
+}
+
+/* Move the knob to the right when checked */
+input:checked + .slider::before {
+  transform: translateX(24px);
+}
