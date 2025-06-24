@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contentContainer {
+  width: 100%;
+  max-width: 1000px; /* Optional: limit the width */
+  margin: 0 auto; /* Center horizontally */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.logo-switchBanner {
+  display: flex;
+  justify-content: space-between; /* logo left, switch right */
+  align-items: center;
+  background-color: hsl(226, 25%, 17%);
+  padding: 1em;
+  border-radius: 15px;
+}
+
+.logo img {
+  width: 200px; /* Adjust the logo size as needed */
+  height: auto;
+}
+
+.themeSwitch img {
+  width: 27px; /* Adjust the theme icon size */
+  height: 27px;
+  cursor: pointer; /* Make the switch icon clickable */
+}
+
+.themeSwitch {
+  background-color: hsl(225, 23%, 24%);
+  padding: 0.4em;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+body {
+  background: linear-gradient(180deg, #040918 0%, #091540 100%);
+  background-repeat: repeat;
+}
