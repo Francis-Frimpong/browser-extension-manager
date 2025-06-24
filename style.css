@@ -50,3 +50,39 @@ body {
   background: linear-gradient(180deg, #040918 0%, #091540 100%);
   background-repeat: repeat;
 }
+
+.extList-tab {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3em;
+}
+
+.extList-tab h3 {
+  font-size: 2em;
+  color: hsl(0, 0%, 93%);
+  text-align: center;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tabs button {
+  width: 100px;
+  border: none;
+  border-radius: 20px;
+  padding: 0.9em;
+  background-color: hsl(225, 23%, 24%);
+  color: hsl(217, 61%, 90%);
+}
+
+.tabs button.all {
+  width: 70px;
+}
+
+.tabs .active-tab {
+  background: hsl(3, 86%, 64%);
+  color: hsl(227, 75%, 14%);
+}
