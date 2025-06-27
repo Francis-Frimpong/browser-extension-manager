@@ -53,6 +53,7 @@ async function getExtensions() {
       const input = document.createElement("input");
       input.type = "checkbox";
       input.name = "checkBtn";
+      input.checked = element.isActive;
       input.classList.add("checkBtn");
       const span = document.createElement("span");
       span.classList.add("slider");
