@@ -77,3 +77,46 @@ async function getExtensions() {
 }
 
 getExtensions();
+
+//Tab switch functionality
+const tabSwitch = document.querySelectorAll(".tabSwitch");
+
+tabSwitch.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    // Remove 'active' class from all tabs
+    tabSwitch.forEach((t) => t.classList.remove("active-tab"));
+
+    // Add 'active' class to the clicked tab
+    tab.classList.add("active-tab");
+  });
+});
+
+function switchTab(e) {
+  let everyExtension = [...extensionContainer.children];
+  everyExtension.forEach((item) => {
+    item.style.display = "block";
+  });
+
+  if (e.target.classList.contains("active")) {
+    everyExtension.forEach((extension) => {
+      let activeExtension = extension.querySelector("input[type = checkbox]");
+      if (!activeExtension.checked) {
+        extension.style.display = "none";
+      }
+    });
+  } else if (e.target.classList.contains("inactive")) {
+    everyExtension.forEach((extension) => {
+      let checkedExtension = extension.querySelector("input[type = checkbox]");
+      if (checkedExtension.checked) {
+        extension.style.display = "none";
+      }
+    });
+  } else if (e.target.classList.contains("all")) {
+    everyExtension.forEach((extension) => {
+      extension.style.display = "block";
+    });
+  }
+}
+const tabs = document.querySelector(".tabs");
+
+tabs.addEventListener("click", switchTab);
