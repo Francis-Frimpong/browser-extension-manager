@@ -91,6 +91,7 @@ tabSwitch.forEach((tab) => {
   });
 });
 
+// Tab function
 function switchTab(e) {
   let everyExtension = [...extensionContainer.children];
   everyExtension.forEach((item) => {

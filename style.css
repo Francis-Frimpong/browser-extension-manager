@@ -144,7 +144,8 @@ body {
 }
 
 .remove:hover {
-  background-color: #d32f2f;
+  background: hsl(3, 86%, 64%);
+  color: hsl(226, 25%, 17%);
 }
 
 .checkBtn {
